@@ -4,19 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <style>
 
-    article{
-        display: flex;
-        flex-direction: row;
-        margin-inline: auto;
-    }
-    img{
-        width: 200px;
-        height: 200px;
-    }
 </style>
 <body>
     <header>
@@ -24,15 +16,17 @@
     </header>
 
     <main>
-        <section>
 
-            <h2>Historia do Marco Zero</h2>
-            <p>O Marco Zero no Recife Antigo é o lugar de referência onde a cidade nasceu e todas as medidas oficiais de distâncias rodoviárias usam como ponto de partida. Seu nome é, na verdade, Praça Rio Branco e fica ao lado do Porto de Pernambuco.</p>
-            <p>Pode-se dizer que ele se situa no centro histórico da cidade, que é mais conhecido como Recife Antigo por ser a parte onde se iniciou o povoamento da capital pernambucana.</p>
-            <p>A popularização do nome Marco Zero aconteceu desde 1938, devido à instalação do símbolo geográfico na parte central da praça. Ele foi uma doação do Automóvel Clube de Pernambuco. Além disso, há nela uma estátua de bronze de 2,80 metros, de autoria do escultor francês Félix Charpentier.</p>
+        <div>
+            <section>
+                <h2>Historia do Marco Zero</h2>
+                <p>O Marco Zero no Recife Antigo é o lugar de referência onde a cidade nasceu e todas as medidas oficiais de distâncias rodoviárias usam como ponto de partida. Seu nome é, na verdade, Praça Rio Branco e fica ao lado do Porto de Pernambuco.</p>
+                <p>Pode-se dizer que ele se situa no centro histórico da cidade, que é mais conhecido como Recife Antigo por ser a parte onde se iniciou o povoamento da capital pernambucana.</p>
+                <p>A popularização do nome Marco Zero aconteceu desde 1938, devido à instalação do símbolo geográfico na parte central da praça. Ele foi uma doação do Automóvel Clube de Pernambuco. Além disso, há nela uma estátua de bronze de 2,80 metros, de autoria do escultor francês Félix Charpentier.</p>
+            </section>
+        </div>
 
-        </section>
-
+        <div>
         <section>
 
             <h2>Arquitetura dos prédios</h2>
@@ -43,7 +37,8 @@
                 <li><strong>Associação Comercial de Pernambuco:</strong>  o local abriga um acervo histórico importante sobre o comércio da cidade. Além disso, é possível conferir quadros, vitrais, livros e jornais de outras épocas;</li>
                 <li><strong>Edifício da Caixa Cultural:</strong> O prédio teve sua aquisição feita pela Caixa Cultural e atualmente organiza exposições. Anteriormente, foi sede do Bank of London & South America Limited e, em meados de 1960, abrigou a Bolsa de Valores pernambucana.</li>
             </ul>
-
+        </div>
+            <section class="imagens">
             <article>
                 <img src="img/antiga-sede.jpg" alt="Imagem da Antiga sede do London & River Plate Bank">
                 <small>Antiga sede do London & River Plate Bank</small>
@@ -58,14 +53,15 @@
                 <img src="img/caixa-cultural.jpg" alt="Imagem do Edifício da Caixa Cultural">
                 <small>Edifício da Caixa Cultural</small>
             </article>
+            </section>
 
-            <p><a href="outrospontos.html">Clique aqui para acessar outros pontos</a></p>
+            <p class="center"><a href="outrospontos.html">Clique aqui para acessar outros pontos</a></p>
 
         </section>
     </main>
 
     <footer>
-        <small>&copy Marco Zero</small>
+        <small class="center">&copy Marco Zero</small>
     </footer>
 </body>
 </html>

@@ -1,0 +1,30 @@
+div{
+    background-color: darkgray;
+    padding: 65px;
+    margin: 35px;
+    border: 8px solid;
+}
+
+.caixa-topo{
+    background-color: antiquewhite;
+    border-radius: 20px;
+}
+
+.caixa-meio{
+    padding-top: 20px;
+    padding-right: 40px;
+    padding-bottom: 60px;
+    padding-left: 80px;
+
+    margin-top: 80px;
+    margin-right: 60px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+
+    border: 20px solid;
+}
+
+.caixa-baixa{
+    background-color: azure;
+    color: turquoise;
+}

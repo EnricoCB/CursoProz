@@ -1,3 +1,4 @@
+
   CREATE TABLE aluno (
   cod_matricula INT PRIMARY KEY,
   nome VARCHAR(255) not NULL,
@@ -42,27 +43,25 @@ INSERT INTO aluno (cod_matricula, nome, data_nasc, email, endereco) VALUES
   (3, 1004);
 
 
-CREATE TRIGGER verifica_data_nasc
-AFTER INSERT
-ON ALUNO FOR EACH ROW
+CREATE FUNCTION verifica_data_nasc()
+RETURNS TRIGGER AS $$
 BEGIN
     IF NEW.data_nasc IS NULL THEN
-    INSERT INTO aluno(mensagem)
-    VALUES('Atualize sua data de nascimento');
+        NEW.mensagem = 'Atualize sua data de nascimento';
     END IF;
-END
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trigger_verifica_data_nasc
+BEFORE INSERT
+ON aluno
+FOR EACH ROW
+EXECUTE FUNCTION verifica_data_nasc();
+
+INSERT INTO aluno (cod_matricula, nome, email, endereco) VALUES
+  (1009, 'pedro', 'pedro@gmail.com', 'rua taquarai');
 
 SELECT * from aluno;
-SELECT * from materia;
-SELECT * FROM aluno_materia;
 
-SELECT aluno.cod_matricula, aluno.nome
-FROM aluno
-JOIN aluno_materia ON aluno.cod_matricula = aluno_materia.cod_matricula
-WHERE aluno_materia.cod_materia = 2;
 
-SELECT aluno.cod_matricula, aluno.nome
-FROM aluno
-JOIN aluno_materia ON aluno.cod_matricula = aluno_materia.cod_matricula
-GROUP BY aluno.cod_matricula, aluno.nome
-HAVING COUNT(aluno_materia.cod_materia) > 1;

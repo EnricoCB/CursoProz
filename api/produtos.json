@@ -1,0 +1,35 @@
+{
+    "produtos": [
+        {
+            "id" : 1,
+            "nome" : "Teclado",
+            "marca" : "Corsair",
+            "categoria" : "Perifericos",
+            "preco" : 200,
+            "quantidade_estoque" : 14,
+            "pronta_entrega" : true
+        },
+
+        {
+            "id" : 2,
+            "nome" : "Mouse",
+            "marca" : "Logitech",
+            "categoria" : "Perifericos",
+            "preco" : 150,
+            "quantidade_estoque" : 5,
+            "pronta_entrega" : true
+
+        },
+       
+        {
+            "id" : 3,
+            "nome" : "Microfone",
+            "marca" : "Logitech",
+            "categoria" : "Perifericos",
+            "preco" : 900,
+            "quantidade_estoque" : 10,
+            "pronta_entrega" : false
+
+        }
+    ]
+}
